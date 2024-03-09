@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mouse Pos</title>
+        <style>
+            #Mouse-Position {
+                position: fixed;
+                bottom: 10px;
+                left: 10px;
+                background-color: #fff;
+                padding: 5px 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="Mouse-Position">Mouse Pos: </div>
+        <script>
+
+            //Get the element where the mouse locaiton will be displayed
+            const mousePosition=document.getElementById('Mouse-Position');
+
+            //Function to update mouse pos
+            function updateMousePosition(event){
+                const x = event.clientX;
+                const y = event.clientY;
+                mousePosition.textContent = `Mouse Position: (${x}, ${y})`;
+            }
+            
+            //Event listener for mouse movement events
+            document.addEventListener('mousemove', updateMousePosition);
+        </script>
+    </body>
+</html>
