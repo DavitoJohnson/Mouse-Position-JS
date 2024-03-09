@@ -23,10 +23,13 @@ function createWindow() {
 
     //set window always on top
     win.setAlwaysOnTop(true);
+
+    win.setIgnoreMouseEvents(true, {forward: true});
 }
 
 //Create new main window when Electron is ready
 app.whenReady().then(createWindow);
+
 
 //Quite when all windows are closed
 app.on('window-all-closed', () => {
