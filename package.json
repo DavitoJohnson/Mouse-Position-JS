@@ -1,13 +1,28 @@
 {
-  "name": "mouse-mosition-app",
-  "versionn": "1.0.0",
+  "name": "mouse-position-app",
+  "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
   "license": "GPL-3.0-only",
   "devDependencies": {
-    "electron": "^29.1.1"
+    "electron": "^29.1.1",
+    "electron-builder": "^24.13.3"
+  },
+"build":{
+  "appId": "com.example.mouse-position-app",
+  "productName": "Mouse Location",
+  "directories":{
+    "output": "dist"
+  },
+  "mac": {
+    "category": "public.app-category.utilities"
+  },
+  "win": {
+    "target": "portable",
+    "icon": "C:/Users/David/Desktop/Programs/Mouse Pos/Mouse-Position-JS/Icon.ico"
   }
-
+}
 }
